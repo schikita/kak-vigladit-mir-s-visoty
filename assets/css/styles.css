@@ -504,14 +504,7 @@ body {
   font-size: clamp(1.00rem, .7vw + 1rem, 1.25rem);
   line-height: 1.85;
 }
-.lead::first-letter{
-  float:left;
-  font-weight:900;
-  font-size: clamp(40px, 5vw, 64px);
-  line-height:.85;
-  margin:.06em .18em 0 0;
-  color: #ffffff;
-}
+
 
 /* цитата — простая, аккуратная */
 .note{
