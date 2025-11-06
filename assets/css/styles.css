@@ -520,8 +520,7 @@ body {
 }
 .note--simple p{
   margin:0;
-  color:#1a252f;
-  font-style: italic;
+  color:#1a252f;  
 }
 .note--simple::before{
   content:"";
@@ -860,7 +859,7 @@ body.no-scroll{ overflow: hidden; }
 .video-description blockquote{
   font-size: 1.1rem; line-height: 1.6; color: #e6e6e6;
 }
-.video-description blockquote{ font-style: italic; font-weight: 400; }
+.video-description blockquote{  font-weight: 400; }
 
 /* Респонсив */
 @media (max-width: 980px){
@@ -1246,7 +1245,7 @@ body.no-scroll{ overflow: hidden; }
 
 /* Цитаты */
 .quote {
-  font-style: italic;
+  
   padding: 1.75rem;
   margin: 1.5rem 0;
   border-left: 4px solid var(--secondary);
