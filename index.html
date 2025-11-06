@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Эксклюзивное интервью: восхождение на Килиманджаро" />
+    <meta name="author" content="Вершины Духа" />
+    <title>Как выглядит мир с высоты 5895 метров? | Живой репортаж</title>
+
+    <!-- Критические шрифты (совпадает с @font-face в styles.css) -->
+    <link rel="preload" href="./assets/fonts/WorkSans/woff2/WorkSans-Regular.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="./assets/fonts/WorkSans/woff2/WorkSans-Medium.woff2" as="font" type="font/woff2"
+        crossorigin>
+    <link rel="preload" href="./assets/fonts/WorkSans/woff2/WorkSans-Bold.woff2" as="font" type="font/woff2"
+        crossorigin>
+
+    <!-- Иконки (для <i class="fa-...">) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+
+    <!-- Swiper (CDN для надёжности) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <!-- Основные стили -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!--Фавиконки-->
+    <meta name="msapplication-config" content="./assets/icons/browserconfig.xml" />
+    <link rel="icon" href="./assets/img/icons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/png" sizes="114x114" href="./assets/icons/favicon-114x114.png">
+    <link rel="icon" type="image/png" sizes="120x120" href="./assets/icons/favicon-120x120.png">
+    <link rel="icon" type="image/png" sizes="16x116" href="./assets/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="57x57" href="./assets/icons/favicon-57x57.png">
+    <link rel="icon" type="image/png" sizes="60x60" href="./assets/icons/favicon-60x60.png">
+    <link rel="icon" type="image/png" sizes="70x70" href="./assets/icons/favicon-70x70.png">
+    <link rel="icon" type="image/png" sizes="72x72" href="./assets/icons/favicon-72x72.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="144x144" href="./assets/icons/favicon-144x144.png">
+    <link rel="icon" type="image/png" sizes="150x150" href="./assets/icons/favicon-150x150.png">
+    <link rel="icon" type="image/png" sizes="152x152" href="./assets/icons/favicon-152x152.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="./assets/icons/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="310x310" href="./assets/icons/favicon-310x310.png">
+</head>
+
+<body>
+    <!-- Прелоадер -->
+    <div id="preloader" aria-hidden="true">
+        <div class="preloader-text">ЖИВОЙ РЕПОРТАЖ</div>
+        <div class="spinner" aria-hidden="true"></div>
+
+    </div>
+
+    <!-- Шапка -->
+    <header class="site-header" role="banner">
+        <div class="container header-container">
+            <a href="https://www.sb.by/" class="logo" target="_blank" rel="noopener noreferrer">
+                <img src="./assets/img/logo.png" alt="Логотип SB.BY" width="44" height="44" />
+                <span class="logo-text">SB.BY</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Открыть меню" aria-controls="mobile-nav"
+                aria-expanded="false">
+                <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        fill="none" />
+                </svg>
+            </button>
+
+            <nav class="main-nav" aria-label="Основное меню">
+                <ul id="nav-menu" class="nav-list">
+                    <li><a href="#preparation">Нюансы подготовки</a></li>
+                    <li><a href="#ascent">Идем в горы?</a></li>
+                    <li><a href="#summit">Покоряем вершину</a></li>
+                    <li><a href="#quiz-mahjong">Важные вопросы</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay" hidden></div>
+
+        <nav class="mobile-nav" id="mobile-nav" aria-hidden="true" aria-label="Мобильное меню">
+            <div class="mobile-nav-header">
+                <a href="https://www.sb.by/" class="logo" target="_blank" rel="noopener noreferrer">
+                    <img src="./assets/img/logo.png" alt="Логотип SB.BY" width="40" height="40" />
+                    <span class="logo-text">SB.BY</span>
+                </a>
+                <button class="nav-close" id="nav-close" aria-label="Закрыть меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            fill="none" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="mobile-nav-menu" id="mobile-nav-menu"></ul>
+
+
+
+
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="top" aria-label="Живой репортаж">
+        <div class="hero-content">
+            <p class="overline">ЖИВОЙ РЕПОРТАЖ</p>
+            <h1>Как выглядит мир с высоты 5895 метров?</h1>
+
+            <div class="hero-buttons">
+                <a href="#interview" class="btn">Читать интервью</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Интервью -->
+    <section class="section section--mountains has-climber" id="interview">
+        <div class="climber" aria-hidden="true"></div>
+
+        <div class="container-right">
+            <div class="interview-content card card--brush reveal">
+                <p class="text-medium">
+                    Студент БГУ Захар Деркачев знает об этом не понаслышке: в свои 20 он успел подняться на Килиманджаро
+                    и растянуть на вершине флаг Беларуси и родного экономического факультета. Какая она – «крыша
+                    Африки»? Наш корреспондент
+                    <a class="link-pretty" href="https://www.sb.by/author/917826-krupenkova-viktoriya/">Виктория
+                        Крупенькова</a>
+                    подробно расспросила парня о том, что чувствуешь, стоя на вершине, и почему в горах продукты номер
+                    один – это халва и сало.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Нюансы подготовки -->
+    <section class="section section--prep" id="preparation">
+        <!-- видео-фон именно для этой секции -->
+        <video class="prep-video-bg" autoplay muted loop playsinline preload="metadata"
+            poster="./assets/img/prep-poster.webp" aria-hidden="true">
+            <!-- если будет .webm — добавь первой строкой -->
+            <!-- <source src="./assets/videos/bg-vid2.webm" type="video/webm"> -->
+            <source src="./assets/videos/bg-vid2.mp4" type="video/mp4">
+        </video>
+
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 class="headline-ink" style="color:antiquewhite">Нюансы подготовки</h2>
+            </div>
+
+            <div class="interview-content card card--soft reveal">
+                <p class="lead" style="color: #ffffff;">
+                    О далеких вершинах со снежными шапками Захар грезил с детства: его папа раньше занимался
+                    альпинизмом и любил рассказывать сыну истории о горах и походах. Среди них были и веселые
+                    (например, о том, как они с друзьями пустили среди неопытных туристов слух о йети, и те отправились
+                    искать его следы), и грустные: некоторые приятели-альпинисты, вместе с которыми отец покорял
+                    семитысячники, остались в горах навсегда… Несмотря на риск и сложности, Захар не переставал
+                    мечтать о том, чтобы совершить восхождение вместе с отцом. Парень выбрал нетривиальный вариант –
+                    Килиманджаро, высшую точку Африки и самую высокую в мире отдельно стоящую гору. Почему она?
+                </p>
+
+                <div class="note note--simple">
+                    <p>– Эта гора хоть и высокая, но не очень сложная, так как не требует навыков скалолазания, –
+                        рассуждает студент. – Плюс я видел ролик про Килиманджаро у одного из блогеров и восхитился тем,
+                        насколько ярко здесь выражены смены климатических зон. Каждый новый километр вверх – и ты как
+                        будто оказываешься в новой стране или даже на другой планете. </p>
+                </div>
+
+                <p class="lead" style="color: #ffffff;">
+                    От «хочу» до «погнали» прошло четыре года. Захар с отцом выбирали и бронировали маршрут, покупали
+                    снаряжение и одежду, способную выдержать и +30 у подножья, и -25 на вершине. И, конечно, старались
+                    поддерживать себя в форме. В феврале, сдав зимнюю сессию, Захар вместе с отцом отправился в
+                    Танзанию, чтобы начать восхождение. Группа подобралась исключительно мужская: пять туристов из
+                    разных стран плюс провожатые, которые вели по маршруту, помогали решать бытовые вопросы и дважды в
+                    день проводили походникам медицинский чекап – измеряли давление, насыщенность крови кислородом.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Идем в горы -->
+    <section class="section section--photo" id="ascent">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2 class="headline-ink">Идем в горы?</h2>
+            </div>
+
+            <div class="interview-content card card--glass reveal">
+                <p>На Килиманджаро ведут восемь основных маршрутов. Есть и экзотические варианты, например, когда
+                    туристов забрасывают на высоту 4800 вертолетом, так что подъем и спуск занимают всего два дня. </p>
+
+                <div class="note note--simple">
+                    <p>– Наш маршрут был одним из самых сложных, а сам поход занял восемь дней: шесть дней до вершины и
+                        два обратно. Обычно на фото и картинках Килиманджаро выглядит как трапеция. Но на самом деле
+                        основание трапеции находится на высоте около 3000 метров, нужно пройти 50 километров по
+                        подножью, чтобы до нее добраться, - рассказал Захар. </p>
+                </div>
+
+
+            </div>
+
+            <div class="ascent-collage">
+                <h3 class="collage-title reveal">Фото с маршрута</h3>
+
+                <div class="collage-grid grid-3" id="ascent-collage-grid">
+                    <!-- ЛЕВО ВВЕРХ -->
+                    <button class="collage-item item--lt" type="button" data-full="./assets/img/ascent/full/01.jpg"
+                        data-caption="Ранний подъём: лесная тропа">
+                        <img src="./assets/img/ascent/thumbs/01.jpg" alt="Лесная тропа" loading="lazy" decoding="async">
+                    </button>
+
+                    <!-- ЛЕВО ВНИЗ -->
+                    <button class="collage-item item--lb" type="button" data-full="./assets/img/ascent/full/02.jpg"
+                        data-caption="Смена пояса растительности">
+                        <img src="./assets/img/ascent/thumbs/02.jpg" alt="Смена пояса растительности" loading="lazy"
+                            decoding="async">
+                    </button>
+
+                    <!-- ПРАВО — ВЕРТИКАЛЬНО, СПАН НА ДВЕ СТРОКИ -->
+                    <button class="collage-item item--rt" type="button" data-full="./assets/img/ascent/full/03.jpg"
+                        data-caption="Облака под ногами">
+                        <img src="./assets/img/ascent/thumbs/03.jpg" alt="Облака под ногами" loading="lazy"
+                            decoding="async">
+                    </button>
+                </div>
+
+                <!-- модалка (как раньше) -->
+                <div class="lightbox" id="ascent-lightbox" aria-hidden="true" role="dialog" aria-modal="true"
+                    aria-label="Просмотр фотографии">
+                    <div class="lightbox__backdrop" data-close></div>
+                    <figure class="lightbox__figure">
+                        <figcaption class="lightbox__caption" id="ascent-lightbox-caption"></figcaption>
+                        <img class="lightbox__img" id="ascent-lightbox-img" alt="Просматриваемая фотография">
+                        <button class="lightbox__close" type="button" aria-label="Закрыть (Esc)" title="Close (Esc)"
+                            data-close>✕</button>
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+    </section>
+
+    <section class="video-section" id="video-section">
+        <div class="video-container">
+            <div class="custom-player">
+                <!-- вертикальное видео; лениво подключаем через data-src -->
+                <video class="report-video" playsinline muted preload="metadata"
+                    poster="./assets/img/decor/climber-right-poster.jpg" data-src="./assets/videos/ascent-clip.mp4">
+                    Ваш браузер не поддерживает видео.
+                </video>
+
+                <div class="controls">
+                    <button class="btn-play" type="button" aria-label="Воспроизвести" aria-pressed="false"></button>
+                    <input class="volume" type="range" min="0" max="1" step="0.05" value="0.6" aria-label="Громкость" />
+                </div>
+            </div>
+        </div>
+
+        <div class="interview-content">
+            <p class="lead">
+                Оптимальная скорость при подъеме – 1–1,5 км/ч. Это позволяет экономить усилия и делает акклиматизацию
+                более плавной и мягкой. Вообще, многие представляют дорогу в горы неправильно, мол, мысленно начертил
+                прямую линию от подножья к вершине и рванул по ней. На самом деле путь выглядит скорее как кардиограмма:
+                на километр поднялись – на полкилометра спустились, разбили лагерь. Это делается для того, чтобы
+                организм постепенно привыкал к снижению атмосферного давления и недостатку кислорода. Главное
+                развлечение в пути – смотреть вокруг.
+            </p>
+            <br>
+        </div>
+    </section>
+
+
+
+    <section class="section section--mountains has-climber" id="nutrition">
+        <div class="climber-1" aria-hidden="true"></div>
+
+        <div class="container-right">
+            <div class="interview-content card card--brush reveal">
+                <p class="text-medium">
+                    С питанием путешественникам помогали проводники. Однажды даже приготовили борщ, правда,
+                    вегетарианский.
+                    Им в ответ предложили отведать сала, что привело их в ужас: как можно отрезать кусок жира и с
+                    аппетитом его съесть?
+                    Кстати, сало входит в топ-2 продуктов для альпинистов наравне с халвой, замечает путешественник:
+                </p>
+
+                <blockquote class="note note--simple">
+                    <p>— Они дают много энергии и хорошо хранятся.</p>
+                    <p class="text-medium">
+                        Вообще, во время подъёма сжигается очень много калорий — 4000–6000 в сутки.
+                        Я ел больше обычного, но за восемь дней всё равно похудел на четыре кило.
+                    </p>
+                </blockquote>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section section--summit js-inview" id="summit">
+
+
+        <!-- заголовок по центру сверху -->
+        <h2 class="summit-title">Покоряем вершину</h2>
+
+        <!-- колонка с двумя блоками текста слева -->
+        <div class="summit-content">
+            <div class="panel panel--glass reveal">
+                <p>
+                    Ночевали туристы в палаточных лагерях. Чтобы умыться и почистить зубы, грели воду на газовой плитке.
+                    <em>— Как-то провожатые соорудили для нас что-то наподобие душа,</em> — вспоминает Захар. —
+                    Погрели воду, залили её в пакет со шлангом — и можно было быстро помыться. Для гор это прямо отель
+                    «пять звёзд».
+                </p>
+            </div>
+
+            <div class="panel panel--glass reveal">
+                <p>
+                    Но самые яркие впечатления оставил подъём на вершину Ухуру — 5895 м над уровнем моря. Последний
+                    рывок
+                    совершали с высоты 4800 м. Что чувствует человек, достигший вершины?
+                </p>
+                <blockquote class="note note--simple">
+                    <p>
+                        <em>— Хотелось бы сказать «радость и ликование», но нет,</em> — признаётся Захар. — Из-за
+                        недостатка
+                        кислорода думаешь лишь о скорейшем спуске. На вершине мы пробыли около 15 минут: встретили
+                        рассвет,
+                        сделали фото и развернули флаг Беларуси. А я ещё и флаг экономического факультета БГУ, который
+                        проделал весь путь вместе со мной.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section section--mahjong" id="quiz-mahjong">
+        <div class="mahjong-wrapper">
+            <h2 class="mahjong-title">Проверь себя</h2>
+            <p class="mahjong-sub">
+                Найди пары: <strong>вопрос</strong> и <strong>правильный ответ</strong> про восхождение.
+            </p>
+
+            <div class="mahjong-grid" id="mahjong-grid" aria-live="polite"></div>
+
+            <div class="mahjong-actions">
+                <button class="mahjong-reset" id="mahjong-reset" type="button">
+                    Играть заново
+                </button>
+                <span class="mahjong-status" id="mahjong-status"></span>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="section section--feel js-inview" id="summit-feel">
+        <!-- Фоновое видео -->
+        <div class="feel-video-bg" aria-hidden="true">
+            <video class="feel-video" autoplay muted loop playsinline poster="./assets/img/IMG_6080.jpeg">
+                <source src="./assets/videos/bg-pre.mp4" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </div>
+
+        <div class="feel-inner">
+            <div class="interview-content card card--soft reveal">
+                <p class="lead">
+                    В целом Захар перенёс подъём хорошо:
+                </p>
+                <br>
+                <blockquote class="note note--simple">
+                    <p>
+                        — Хотя с 4000 метров уже начинает ощущаться недостаток кислорода. Представьте, что вы вдыхаете
+                        полной грудью,
+                        но при этом воздуха всё равно как будто не хватает. Дыхание учащается, говорить не хочется —
+                        тяжело.
+                        По сложности и физическим усилиям оцениваю подъём на семь из десяти. Но при этом мысли, зачем я
+                        в
+                        это ввязался,
+                        у меня не возникло ни разу.
+                    </p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <section class="projects-section" id="projects" aria-label="Живой репортаж — материалы">
+        <div class="projects-inner container">
+            <div class="section-header">
+                <h2 class="section-title text-pr">Живой репортаж — материалы</h2>
+            </div>
+
+            <div class="projects-viewport" data-autoplay="true" data-interval="5000">
+                <div class="projects-stage">
+                    <a href="https://www.sb.by/sp/nikogda-ne-sdavaites/" class="project-card">
+                        <img src="./assets/img/projects/last.jpg" loading="lazy" alt="Белорусы+" />
+                        <div class="project-info">
+                            <h3>Никогда не сдавайтесь!</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/iz-minska-v-derevnu/" class="project-card is-active">
+                        <img src="./assets/img/projects/farm-view.jpg" loading="lazy" alt="Адаптация" />
+                        <div class="project-info">
+                            <h3>Из Минска - в деревню</h3>
+                        </div>
+                    </a>
+
+                    <a href="https://www.sb.by/sp/spotting/" class="project-card">
+                        <img src="./assets/img/projects/hero.jpg" loading="lazy" alt="Кто такие споттеры?" />
+                        <div class="project-info">
+                            <h3>Кто такие споттеры?</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="projects-controls">
+                    <button class="pr-btn prev" aria-label="Назад">◀</button>
+                    <div class="pr-dots" aria-hidden="true"></div>
+                    <button class="pr-btn next" aria-label="Вперед">▶</button>
+                </div>
+            </div>
+
+            <div class="projects-footer">
+                <a href="https://www.sb.by/articles/themes/spetsproekt-sb-nash-zhivoy-reportazh/"
+                    class="btn-all-projects">
+                    Смотреть все материалы
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-credits">
+            <p>Автор: <strong>Виктория КРУПЕНЬКОВА</strong></p>
+            <p>Фото: <strong>Александр КУЛЕВСКИЙ</strong></p>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-copy">© Издательский дом «Беларусь сегодня»</div>
+    </footer>
+
+    <!-- Кнопка наверх -->
+    <a href="#top" id="back-to-top" aria-label="Вернуться наверх">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </a>
+
+    <!-- Скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+    <script>
+        function loadYandexMetrika() {
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) return;
+                }
+                (k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a);
+            })(
+                window,
+                document,
+                "script",
+                "https://mc.yandex.ru/metrika/tag.js",
+                "ym"
+            );
+            ym(16707172, "init", {
+                webvisor: true,
+                clickmap: true,
+                accurateTrackBounce: true,
+                trackLinks: true,
+            });
+        }
+
+        function loadGTM() {
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-KRVNNK");
+        }
+
+        window.addEventListener("load", () => {
+            setTimeout(loadYandexMetrika, 3000);
+            setTimeout(loadGTM, 4000);
+        });
+    </script>
+</body>
+
+</html>
